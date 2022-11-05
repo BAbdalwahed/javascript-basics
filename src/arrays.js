@@ -27,35 +27,43 @@ const numbersToStrings = numbers => {
 };
 
 const uppercaseWordsInArray = strings => {
-  
+  const uppercased = strings.map(strings => strings.toUpperCase());
+  return uppercased;
 };
 
 const reverseWordsInArray = strings => {
-  
+  return strings.map(strings => strings.split('').reverse('').join(''));
 };
 
 const onlyEven = numbers => {
-  
+  return numbers.filter(numbers => numbers % 2 === 0);
 };
 
-const removeNthElement2 = (index, array) => {
-  
+function removeNthElement2(index, array) {
+  const newArray = [...array];
+  newArray.splice(index, 1);
+  return newArray;
 };
 
 const elementsStartingWithAVowel = strings => {
-  
+  return strings.filter(strings => strings.match(/^[aeiou]/gi))
 };
 
 const removeSpaces = string => {
-  
+  return string.replaceAll(" ", "");
 };
 
 const sumNumbers = numbers => {
-  
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+    return sum;
 };
 
 const sortByLastLetter = strings => {
-  
+  const newArray = [strings.sort((a, b) => a[a.length-1] - b[b.length-1])];
+  return newArray; 
 };
 
 module.exports = {
